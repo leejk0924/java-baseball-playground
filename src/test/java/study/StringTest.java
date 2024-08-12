@@ -12,12 +12,14 @@ public class StringTest {
         String actual = "abc".replace("b", "d");
         assertThat(actual).isEqualTo("adc");
     }
+
     @Test
     @DisplayName("split regex matched & contains test")
     void split_string_test_use_contains() {
         String target = "1,2";
         assertThat(target.split(",")).contains("1", "2");
     }
+
     @Test
     @DisplayName("split regex not matched test")
     void split_regex_(){
@@ -25,6 +27,7 @@ public class StringTest {
         String[] split = target.split(",");
         assertThat(split).containsExactly("1");
     }
+
     @Test
     @DisplayName("split regex matched & containsExactly test")
     void split_regex_matched_use_containsExactly() {
@@ -32,6 +35,7 @@ public class StringTest {
         String[] split = target.split(",");
         assertThat(split).containsExactly("1", "2", "3");
     }
+
     @Test
     @DisplayName("Delete bracket & split target test")
     void substringBracket() {
@@ -39,6 +43,7 @@ public class StringTest {
         String[] splitTarget = target.substring(1, 4).split(",");
         assertThat(splitTarget).contains("1", "2");
     }
+
     @Test
     @DisplayName("charAt() return index char")
     void charAt_return_target_index_of_character(){

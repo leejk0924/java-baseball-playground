@@ -1,15 +1,13 @@
 package study;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.HashMap;
-import java.util.Scanner;
 import java.util.function.BiFunction;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class StringCalculatorTest {
     private static final HashMap<String, BiFunction<Integer, Integer, Integer>> operations = new HashMap<>();
@@ -36,6 +34,7 @@ public class StringCalculatorTest {
 
         assertThat(result).isEqualTo(ofInteger(expected));
     }
+
     private int ofInteger(String number) {
         return Integer.parseInt(number);
     }
